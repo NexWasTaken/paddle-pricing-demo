@@ -1,3 +1,31 @@
+# Getting Setup w/ Paddle
+
+1. Paddle Website
+
+   - Register a sandbox account.
+   - Create products w/ various prices.
+   - Go to `Developer Tools/Authentication`. Scroll down to `Client-side tokens`, click on `+ Generate client-side token`.
+
+2. VS Code
+
+   - Install the paddle package: `pnpm i @paddle/paddle-js`.
+   - Initialize the paddle package in your codebase:
+
+   ```ts
+   import { initializePaddle, Paddle } from "@paddle/paddle-js";
+
+   const [paddle, setPaddle] = useState<Paddle>();
+
+   useEffect(() => {
+     initializePaddle({
+       environment: "sandbox",
+       token: process.env["NEXT_PUBLIC_PADDLE_CLIENT_TOKEN"]!,
+     }).then((paddle) => setPaddle(paddle));
+   }, []);
+   ```
+
+3. Create a success page. The user needs to be know their payment was successful. You can also add confetti animations.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
