@@ -42,7 +42,7 @@ export default function PricingCard(props: PropsType) {
       ],
       settings: {
         displayMode: "overlay",
-        successUrl: "https://localhost:3000/success",
+        successUrl: "http://localhost:3000/success",
       },
     });
   };

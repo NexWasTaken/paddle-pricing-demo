@@ -26,6 +26,12 @@
 
 3. Create a success page. The user needs to be know their payment was successful. You can also add confetti animations.
 
+---
+
+---
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
